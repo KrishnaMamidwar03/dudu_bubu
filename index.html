@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will you come on a sweet date?</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: white;
+            flex-direction: column;
+        }
+
+        img {
+            width: 400px; /* Set width to 400px (3 times original size) */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        .container {
+            margin-top: 20px;
+        }
+
+        .teddy {
+            background-color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        #signboard {
+            margin-bottom: 10px;
+            font-size: 3em;
+        }
+
+        #buttons {
+            display: flex;
+            justify-content: center;
+        }
+
+        button {
+            margin: 0 10px;
+            font-size: 3em;
+        }
+    </style>
+</head>
+<body>
+    <img id="teddyImg" src="https://media1.tenor.com/m/0n2Sdd4Z2nEAAAAC/aham-sithi-peace-sithi.gif" alt="Teddy Bear">
+    <div class="container">
+        <div class="teddy">
+            <div id="signboard">Will you come on a sweet date?</div>
+            <div id="buttons">
+                <button onclick="yesClicked()">Yes, I will</button>
+                <button onclick="noClicked()">No, I am angry</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        function yesClicked() {
+            document.getElementById("signboard").innerHTML = "Great! Let's have a sweet date!";
+            document.getElementById("teddyImg").src = "https://media.tenor.com/BDP5eJeyZPQAAAAi/tkthao219-bubududu.gif"; // Replace with path to new GIF
+        }
+
+        function noClicked() {
+            let messages = [
+                "Please reconsider. It will be fun!",
+                "Come on, don't be angry. Let's go!",
+                "I promise to make it up to you!",
+                "You won't regret it, I promise!",
+                "Let's make some sweet memories together!",
+                "I'll bring your favorite treats!",
+                "How about a surprise location?",
+                "Let's dress up and make it a special day!",
+                "Your smile is all I need!",
+                "I'll plan everything, you just have to say yes!"
+            ];
+            let randomIndex = Math.floor(Math.random() * messages.length);
+            document.getElementById("signboard").innerHTML = messages[randomIndex];
+            // document.getElementById("teddyImg").src = "https://media.tenor.com/BDP5eJeyZPQAAAAi/tkthao219-bubududu.gif" ;
+        // img.src="https://media.tenor.com/BDP5eJeyZPQAAAAi/tkthao219-bubududu.gif";
+        }
+    </script>
+</body>
+</html>
